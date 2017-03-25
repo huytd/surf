@@ -41,7 +41,7 @@ static Bool allowgeolocation      = TRUE;
 	     "prop=\"`xprop -id $2 $0 " \
 	     "| sed \"s/^$0(STRING) = \\(\\\\\"\\?\\)\\(.*\\)\\1$/\\2/\" " \
 	     "| xargs -0 printf %b | dmenu`\" &&" \
-	     "xprop -id $2 -f $1 8s -set $1 \"$prop\"", \
+	     "xprop -id $2 -f $1 8u -set $1 \"$prop\"", \
 	     p, q, winid, NULL \
 	} \
 }
