@@ -2,6 +2,15 @@ surf - simple webkit-based browser
 ==================================
 surf is a simple Web browser based on WebKit/GTK+.
 
+Patches applied
+---------------
+In this repository, I made two new commits to apply the two patches:
+
+    9d0d9  Add unicode support in dmenu
+    d8746  Add homepage support. By default it will open https://duckduckgo.com
+    
+All patches are downloaded from https://surf.suckless.org/patches
+
 Requirements
 ------------
 In order to build surf you need GTK+ and Webkit/GTK+ header files.
