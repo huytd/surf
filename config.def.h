@@ -56,6 +56,12 @@ static Bool allowgeolocation      = TRUE;
 	} \
 }
 
+/* WATCH YOUTUBE */
+#define WATCH {.v = (char *[]){ "/bin/sh", "-c", \
+    "st -e \
+    yt $(xprop -id $0 _SURF_URI | cut -d \\\" -f 2)", \
+    winid, NULL } }
+
 /* PLUMB(URI) */
 /* This called when some URI which does not begin with "about:",
  * "http://" or "https://" should be opened.
@@ -129,6 +135,9 @@ static Key keys[] = {
 	{ MODKEY|GDK_SHIFT_MASK,GDK_b,      togglescrollbars, { 0 } },
 	{ MODKEY|GDK_SHIFT_MASK,GDK_g,      togglegeolocation, { 0 } },
 	{ MODKEY|GDK_SHIFT_MASK,GDK_y,      toggleproxy, { 0 } },
+
+  // Watch Youtube
+  { MODKEY,               GDK_w,      spawn,      WATCH },
 };
 
 /* button definitions */
