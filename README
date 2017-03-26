@@ -4,7 +4,7 @@ surf is a simple Web browser based on WebKit/GTK+.
 
 Patches applied
 ---------------
-In this repository, I made two new commits to apply the two patches:
+In this repository, I made some new commits to apply the two patches:
 
     9d0d9  Add unicode support in dmenu
     d8746  Add homepage support. By default it will open https://duckduckgo.com
