@@ -6,6 +6,8 @@ static char *scriptfile     = "~/.surf/script.js";
 static char *styledir       = "~/.surf/styles/";
 static char *cachefolder    = "~/.surf/cache/";
 
+static char *downdir        = "/tmp";
+
 static Bool kioskmode       = FALSE; /* Ignore shortcuts */
 static Bool showindicators  = TRUE;  /* Show indicators in window title */
 static Bool zoomto96dpi     = TRUE;  /* Zoom pages to always emulate 96dpi */
@@ -55,12 +57,6 @@ static Bool allowgeolocation      = TRUE;
 	     d, useragent, r, cookiefile, NULL \
 	} \
 }
-
-/* WATCH YOUTUBE */
-#define WATCH {.v = (char *[]){ "/bin/sh", "-c", \
-    "st -e \
-    yt $(xprop -id $0 _SURF_URI | cut -d \\\" -f 2)", \
-    winid, NULL } }
 
 /* PLUMB(URI) */
 /* This called when some URI which does not begin with "about:",
@@ -135,9 +131,6 @@ static Key keys[] = {
 	{ MODKEY|GDK_SHIFT_MASK,GDK_b,      togglescrollbars, { 0 } },
 	{ MODKEY|GDK_SHIFT_MASK,GDK_g,      togglegeolocation, { 0 } },
 	{ MODKEY|GDK_SHIFT_MASK,GDK_y,      toggleproxy, { 0 } },
-
-  // Watch Youtube
-  { MODKEY,               GDK_w,      spawn,      WATCH },
 };
 
 /* button definitions */
