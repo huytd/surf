@@ -25,7 +25,7 @@ static Bool strictssl       = FALSE; /* Refuse untrusted SSL connections */
 static time_t sessiontime   = 3600;
 
 /* Webkit default features */
-static Bool enablescrollbars      = TRUE;
+static Bool enablescrollbars      = FALSE;
 static Bool enablespatialbrowsing = TRUE;
 static Bool enablediskcache       = TRUE;
 static int diskcachebytes         = 5 * 1024 * 1024;
@@ -93,6 +93,7 @@ static Key keys[] = {
 
 	{ MODKEY,               GDK_p,      clipboard,  { .b = TRUE } },
 	{ MODKEY,               GDK_y,      clipboard,  { .b = FALSE } },
+	{ 0,                    GDK_y,      clipboard,  { .b = FALSE } },
 
 	{ MODKEY|GDK_SHIFT_MASK,GDK_j,      zoom,       { .i = -1 } },
 	{ MODKEY|GDK_SHIFT_MASK,GDK_k,      zoom,       { .i = +1 } },

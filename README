@@ -20,6 +20,7 @@ VIM-like navigation:
     g, G     Jump to top/bottom of current page
     f, F     Show link hint then open in current page or in new tab
     Esc      Exit link hint mode
+    y        Copy current page URL to clipboard
 
 Requirements
 ------------
