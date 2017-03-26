@@ -311,7 +311,8 @@ document.addEventListener( 'keydown', initKeyBind, false );
 function initKeyBind(e){
     var t = e.target;
     var currentElement = document.activeElement.tagName + "";
-    if (currentElement == "INPUT" || currentElement == "TEXTAREA") {
+    var currentElementClass = document.activeElement.className;
+    if (currentElement == "INPUT" || currentElement == "TEXTAREA" || currentElementClass.match(/input|edit/i) !== null) {
       return;
     }
     if( t.nodeType == 1){
