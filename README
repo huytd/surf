@@ -8,8 +8,18 @@ In this repository, I made two new commits to apply the two patches:
 
     9d0d9  Add unicode support in dmenu
     d8746  Add homepage support. By default it will open https://duckduckgo.com
+    508d5  Add ability to download file. Files will be saved in /tmp folder
     
 All patches are downloaded from https://surf.suckless.org/patches
+
+This fork also supports VIM-like navigation. All you need to do is copy scripts/script.js file to your ~/.surf/script.js
+
+VIM-like navigation:
+
+    h,j,k,l  Scrolling
+    g, G     Jump to top/bottom of current page
+    f, F     Show link hint then open in current page or in new tab
+    Esc      Exit link hint mode
 
 Requirements
 ------------
